@@ -1,4 +1,4 @@
-# jhkang
+# jhkang-portfolio
 
 ## Project setup
 ```
