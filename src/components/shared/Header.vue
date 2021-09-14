@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import ThemeSwitcher from '../ThemeSwitcher'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 import feather from 'feather-icons'
 
 export default {

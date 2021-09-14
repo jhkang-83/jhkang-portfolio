@@ -1,20 +1,29 @@
-import portfolio from '@/api/portfolio'
+import axios from 'axios'
 
-export const initialState = () => ({
-  projectList: []
-})
+const state = {
+  projects: []
+}
 
-export const module = {
-  namespaced: true,
-  state: initialState(),
-  mutations: {
-    SET_PROJECT_LIST (state, payload) {
-      state.projectList = payload || initialState().projectList
-    }
-  },
-  actions: {
-    initProjectList (commit) {
-      commit('SET_PROJECT_LIST', portfolio)
-    }
+const getters = {
+  projectList: state => state.projects
+}
+
+const actions = {
+  async initProjectList ({ commit }) {
+    const res = await axios.get('http://localhost:3000/projects')
+    commit('SET_PROJECT_LIST', res.data)
   }
+}
+
+const mutations = {
+  SET_PROJECT_LIST: (state, payload) => (
+    state.projects = payload
+  )
+}
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
 }
