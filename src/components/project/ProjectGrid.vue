@@ -49,6 +49,7 @@ export default {
     ...mapActions(['initProjectList']),
     async getList () {
       this.initProjectList()
+      console.log(this.projectList)
     },
     updated () {
       feather.replace()
