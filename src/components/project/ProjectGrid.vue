@@ -10,7 +10,7 @@
     <div v-for="(item, index) in projectList" :key="index" class="rounded-3xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
       <router-link :to="{ path: '/projects/single-project', query: { projectInfo: `${index}` } }">
         <div>
-          <img :src="item.thumbnail" class="rounded-t-3xl border-none"/>
+          <img :src="`/${item.thumbnail}`" class="rounded-t-3xl border-none"/>
         </div>
 
         <div class="text-center px-4 py-6">
@@ -79,8 +79,7 @@ export default {
 .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
 .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
 .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-}
+
 .highlight-gray {
   color: rgb(155,154,151);
 }
