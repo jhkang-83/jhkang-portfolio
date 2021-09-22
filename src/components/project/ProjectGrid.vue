@@ -8,9 +8,9 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-3 mt-16 sm:gap-10">
     <div v-for="(item, index) in projectList" :key="index" class="rounded-3xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
-      <router-link :to="{ path: '/projects/single-project', query: { projectInfo: `${index}` } }">
+      <router-link :to="{ path: '/projects/single-project', query: { projectNo: item.no }}">
         <div>
-          <img :src="`/${item.thumbnail}`" class="rounded-t-3xl border-none"/>
+          <img :src="require(`@/assets/images/${item.thumbnail}`)" class="rounded-t-3xl border-none"/>
         </div>
 
         <div class="text-center px-4 py-6">
@@ -33,11 +33,6 @@ import feather from 'feather-icons'
 
 export default {
   name: 'ProjectGrid',
-  data () {
-    return {
-      PROJECT_LIST: []
-    }
-  },
   computed: mapGetters(['projectList']),
   created () {
     this.getList()

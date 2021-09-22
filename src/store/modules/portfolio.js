@@ -10,7 +10,7 @@ const getters = {
 
 const actions = {
   async initProjectList ({ commit }) {
-    const res = await fetch(`${process.env.VUE_APP_API_URI}/019dc5e2f4692fb2f63680a1a384e424/raw/fe701376c583df19f74fa97185641b79f678a6ee/portfolio`)
+    const res = await fetch(`${process.env.VUE_APP_API_URI}/019dc5e2f4692fb2f63680a1a384e424/raw/308caf63d5f3b8662f3668c25e61fe12fd806acd/portfolio`)
     const json = await res.json()
     console.log('json >>>', json)
     return commit('SET_PROJECT_LIST', json.projects)
