@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container mx-auto">
     <banner />
     <project-grid />
   </div>

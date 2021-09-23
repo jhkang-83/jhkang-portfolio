@@ -1,15 +1,15 @@
 <template>
-  <div class="block sm:flex gap-0 sm:gap-10">
-    <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-      <p v-for="(item, index) in desc"
-      :key="index"
+  <div class="sm:mt-10">
+    <div v-for="(item, index) in desc"
+      :key="index" class="w-full text-left sm:mt-0">
+      <span
       class="mb-5 text-sm text-gray-600">
       {{ item }}
-      </p>
+      </span>
     </div>
 
-    <div class="mb-10 sm:mb-0" v-for="(item, index) in project_img" :key="index">
-      <img :src="require(`@/assets/images/${item}`)"/>
+    <div v-for="(item, index) in project_img" :key="index" class="mt-8 sm:mt-10 mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark" >
+      <img :src="require(`@/assets/images/${item}`)" class="rounded-2xl shadow-lg border-opacity-10"/>
     </div>
   </div>
 </template>
