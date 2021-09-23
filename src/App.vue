@@ -2,16 +2,19 @@
   <div :class="appTheme">
     <Header></Header>
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import feather from 'feather-icons'
 import Header from '@/components/shared/Header'
+import Footer from '@/components/shared/Footer'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   data: () => {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-7 sm:mt-20 mb-7">
+    <p class="text-left text-2xl sm:text-3xl font-bold text-primary-dark dark:text-primary-light mt-7 sm:mt-20 mb-7">
       {{ title }}
     </p>
   </div>
@@ -12,7 +12,7 @@
         <i class="header-list-icon"></i>
         <div class="text-primary-gray dark:text-primary-light">platform</div>
       </div>
-      <div class="list-item">
+      <div class="list-item pl-5">
         <span v-for="(item, index) in platform" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
       </div>
     </div>
@@ -23,7 +23,7 @@
         <i class="header-list-icon"></i>
         <div class="text-primary-gray dark:text-primary-light">task</div>
       </div>
-      <div class="list-item">
+      <div class="list-item pl-5">
         <span v-for="(item, index) in task" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
       </div>
     </div>
@@ -32,9 +32,9 @@
     <div style="display: flex; padding-bottom: 10px;">
       <div class="flex items-center list-title">
         <i class="header-list-icon"></i>
-        <div class="text-primary-gray dark:text-primary-light">task</div>
+        <div class="text-primary-gray dark:text-primary-light">tech_stack</div>
       </div>
-      <div class="list-item">
+      <div class="list-item pl-5">
         <span v-for="(item, index) in tech_stack" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
       </div>
     </div>
@@ -66,10 +66,7 @@ export default {
   display: block;
 }
 .list-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100px;
+  width: 120px;
 }
 .list-item {
   display: flex;
