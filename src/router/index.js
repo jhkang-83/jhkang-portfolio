@@ -18,6 +18,7 @@ const routes = [
   {
     path: '/projects/single-project',
     name: 'Single Projects',
+    props: (route) => ({ projectNo: Number(route.query.projectNo) }),
     component: () => import(/* webpackChunkName: "projects" */ '@/views/SingleProject.vue')
   }
 ]
