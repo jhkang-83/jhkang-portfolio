@@ -4,27 +4,78 @@
       {{ title }}
     </p>
   </div>
-  <div class="flex">
-    <div>
-      <div class="flex items-center mr-10">
-        <div>
-          <listIcon/>
-        </div>
+
+  <div>
+    <!-- platform -->
+    <div style="display: flex; padding-bottom: 10px;">
+      <div class="flex items-center list-title">
+        <i class="header-list-icon"></i>
+        <div class="text-primary-gray dark:text-primary-light">platform</div>
+      </div>
+      <div class="list-item">
+        <span v-for="(item, index) in platform" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
+      </div>
+    </div>
+
+    <!-- task -->
+    <div style="display: flex; padding-bottom: 10px;">
+      <div class="flex items-center list-title">
+        <i class="header-list-icon"></i>
+        <div class="text-primary-gray dark:text-primary-light">task</div>
+      </div>
+      <div class="list-item">
+        <span v-for="(item, index) in task" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
+      </div>
+    </div>
+
+    <!-- tech_stack -->
+    <div style="display: flex; padding-bottom: 10px;">
+      <div class="flex items-center list-title">
+        <i class="header-list-icon"></i>
+        <div class="text-primary-gray dark:text-primary-light">task</div>
+      </div>
+      <div class="list-item">
+        <span v-for="(item, index) in tech_stack" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
       </div>
     </div>
   </div>
+
+  <div class="h-line"/>
 </template>
 
 <script>
-import listIcon from '@/assets/images/header_listIcon.svg'
 export default {
   name: 'Projects',
-  components: { listIcon },
   props: {
-    title: { type: String, default: '' }
+    title: { type: String, default: '' },
+    platform: { type: Array, default: () => [] },
+    task: { type: Array, default: () => [] },
+    tech_stack: { type: Array, default: () => [] }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.header-list-icon {
+  background: url(~@/assets/images/svgIcons/header_listIcon.svg) no-repeat;
+  border: 0;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  display: block;
+}
+.list-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
+}
+.list-item {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  min-width: 0px;
+  margin-left: 5px;
+}
 </style>

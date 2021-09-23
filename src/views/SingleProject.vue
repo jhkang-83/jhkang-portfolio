@@ -1,17 +1,25 @@
 <template>
   <div class="container mx-auto mt-10 sm:mt-20">
-    <SingleProjectHeader :title="projectData.title"/>
+    <SingleProjectHeader
+    :title="projectData.title"
+    :platform="projectData.platform"
+    :task="projectData.task"
+    :tech_stack="projectData.tech_stack"
+    />
+    <SingleProjectInfo :desc="projectData.desc" :project_img="projectData.project_img"/>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import SingleProjectHeader from '@/components/project/SingleProjectHeader.vue'
+import SingleProjectInfo from '@/components/project/SingleProjectInfo.vue'
 
 export default {
   name: 'Projects',
   components: {
-    SingleProjectHeader
+    SingleProjectHeader,
+    SingleProjectInfo
   },
   computed: mapGetters(['projectList']),
   props: {
