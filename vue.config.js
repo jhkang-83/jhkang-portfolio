@@ -14,7 +14,7 @@ const appPath = {
 
 module.exports = {
   outputDir: 'dist',
-  publicPath: '/',
+  publicPath: '/jhkang-portfolio/',
 
   chainWebpack: config => {
     if (isAnalyze) {
