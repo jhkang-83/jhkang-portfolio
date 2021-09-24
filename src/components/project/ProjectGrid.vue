@@ -7,7 +7,7 @@
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-3 mt-16 sm:gap-10">
-    <div v-for="(item, index) in projectList" :key="index" class="rounded-3xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
+    <div v-for="(item, index) in projectData" :key="index" class="rounded-3xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
       <router-link :to="{ path: '/projects/single-project', query: { projectNo: item.no }}">
         <div>
           <img :src="require(`@/assets/images/${item.thumbnail}`)" class="rounded-t-3xl border-none"/>
@@ -27,12 +27,22 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 import feather from 'feather-icons'
 
 export default {
   name: 'ProjectGrid',
-  computed: mapGetters(['projectList']),
+  data () {
+    return {
+      projectData: []
+    }
+  },
+  computed: {
+    ...mapState({
+      projectData: state => state.projects
+    }),
+    ...mapGetters(['projectList'])
+  },
   created () {
     this.getList()
   },
@@ -40,10 +50,14 @@ export default {
     feather.replace()
   },
   methods: {
-    ...mapActions(['initProjectList']),
+    ...mapActions(['get_project_list']),
+
     async getList () {
-      this.initProjectList()
+      this.get_project_list()
+
+      this.projectData = this.projectList
     },
+
     updated () {
       feather.replace()
     }
