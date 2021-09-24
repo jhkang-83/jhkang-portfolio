@@ -7,13 +7,6 @@ export default createStore({
     poc: ''
   },
   mutations: {
-    setPoc (state, { info }) {
-      if (!info.os) {
-        state.poc = 'PC'
-      } else {
-        state.poc = 'MWEB'
-      }
-    }
   },
   actions: {
   },
@@ -21,8 +14,6 @@ export default createStore({
     portfolio
   },
   plugins: [
-    createPersistedState({
-      path: ['portfolio']
-    })
+    createPersistedState()
   ]
 })
