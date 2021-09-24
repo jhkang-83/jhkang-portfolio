@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapState } from 'vuex'
 import SingleProjectHeader from '@/components/project/SingleProjectHeader.vue'
 import SingleProjectInfo from '@/components/project/SingleProjectInfo.vue'
 
@@ -21,26 +21,23 @@ export default {
     SingleProjectHeader,
     SingleProjectInfo
   },
-  computed: mapGetters(['projectList']),
+  data () {
+    return {
+      projectData: []
+    }
+  },
+  computed: {
+    ...mapState({
+      projectData: state => state.projectList
+    }),
+    ...mapGetters(['projectList'])
+  },
   props: {
     projectNo: {
       type: Number,
       default: null
     },
     projectArr: { type: Object, required: true }
-  },
-  data () {
-    return {
-      projectData: {
-        desc: [],
-        no: null,
-        platform: [],
-        project_img: [],
-        task: [],
-        tech_stack: [],
-        title: ''
-      }
-    }
   },
   mounted () {
     // this.projectData = this.projectList.find(item => item.no === this.projectNo)
@@ -50,7 +47,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      GET_PROJECT_LIST: 'initProjectList'
+      GET_PROJECT_LIST: 'get_project_list'
     }),
     async getList () {
       await this.GET_PROJECT_LIST()
@@ -58,7 +55,7 @@ export default {
       this.projectData = this.projectList.find(item => item.no === this.projectNo)
       console.log('projectNo >>>', this.projectNo)
 
-      console.log('create projectList >>>', this.projectList)
+      console.log('create projectData >>>', this.projectData)
     }
   }
 }
