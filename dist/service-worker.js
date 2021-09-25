@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jhkang-portfolio/precache-manifest.6504bb39dc0954ebdc8ce6bd33e621da.js"
+  "/jhkang-portfolio/precache-manifest.1f723318c03d3d0845bffb16de4fd46c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "jhkang-portfolio"});
