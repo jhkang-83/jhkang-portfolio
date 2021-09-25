@@ -1,3 +1,46 @@
+// vue.js face effect
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+[v-cloak] {
+  display: none;
+}
+body {
+  &.bg-grey {
+    background: #fafafa;
+  }
+  &.no-ui-bars {
+    padding-top: 0 !important;
+  }
+
+  &.__ui-frozen-body__ {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &.__ui-unfrozen-body__ {
+    position: fixed;
+    overflow: auto;
+  }
+}
+.disable-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .sans {
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont,"Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }

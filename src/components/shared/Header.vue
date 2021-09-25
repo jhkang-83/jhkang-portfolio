@@ -4,18 +4,18 @@
       <div class="flex justify-between items-center">
         <div>
           <article class="page sans">
-            <button v-if="theme === 'light'" style="color: #000000;">Jihye | Front-end 개발자</button>
-            <button v-else style="color: #ffffff;">Jihye | Front-end 개발자</button>
+            <router-link to="/">Jihye | Front-end 개발자</router-link>
           </article>
         </div>
 
-        <theme-switcher
+        <!-- dark모드는 좀 더 고민 해보는 걸로 -->
+        <!-- <theme-switcher
           :theme="theme"
           @themeChanged="updateTheme"
           class="block sm:hidden bg-ternary-light dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 rounded-lg ml-10"
-        />
+        /> -->
         <div class="sm:hidden">
-          <button @click="isOpen = !isOpen" type="buttom" class="focus:outline-none">
+          <button @click="isOpen = !isOpen" type="button" class="focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             class="h-6 w-6 fill-current text-secondary-dark dark:text-ternary-light"
@@ -53,7 +53,7 @@
         </router-link>
       </div>
 
-      <div class="hidden sm:flex justify-between items-center flex-col md:flex-row">
+      <!-- <div class="hidden sm:flex justify-between items-center flex-col md:flex-row">
         <div class="ml-8 bg-primary-light dark:bg-ternary-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
         >
           <theme-switcher
@@ -61,18 +61,18 @@
           @themeChanged="updateTheme"
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </nav>
 </template>
 
 <script>
-import ThemeSwitcher from '@/components/ThemeSwitcher'
+// import ThemeSwitcher from '@/components/ThemeSwitcher'
 import feather from 'feather-icons'
 
 export default {
   components: {
-    ThemeSwitcher
+    // ThemeSwitcher
   },
   data () {
     return {

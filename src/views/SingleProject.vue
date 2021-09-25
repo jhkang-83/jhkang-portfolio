@@ -1,4 +1,5 @@
 <template>
+<!-- project detail -->
   <div class="container mx-auto mt-10 sm:mt-20">
     <SingleProjectHeader
     :title="projectData.title"
@@ -36,11 +37,9 @@ export default {
     projectNo: {
       type: Number,
       default: null
-    },
-    projectArr: { type: Object, required: true }
+    }
   },
   mounted () {
-    // this.projectData = this.projectList.find(item => item.no === this.projectNo)
   },
   created () {
     this.getList()
@@ -53,9 +52,6 @@ export default {
       await this.GET_PROJECT_LIST()
 
       this.projectData = this.projectList.find(item => item.no === this.projectNo)
-      console.log('projectNo >>>', this.projectNo)
-
-      console.log('create projectData >>>', this.projectData)
     }
   }
 }
