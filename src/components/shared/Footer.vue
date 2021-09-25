@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-20 sm:pt-40 pb-8">
+  <div class="pt-15 sm:pt-20 pb-8">
     <div class="flex justify-center items-center text-center">
-      <div class="text-lg text-ternary-dark dark:text-ternary-light">
+      <div class="text-base text-ternary-dark dark:text-ternary-light">
         &copy; Copyright 2021. JH Kang
       </div>
     </div>
