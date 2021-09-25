@@ -46,7 +46,7 @@ module.exports = {
       }))
     config.plugin('copy').tap(([options]) => {
       options[0].ignore.push('images/**/*')
-      options[0].ignore.push('favicon.ico')
+      options[0].ignore.push('favicon.png')
       options[0].ignore.push('robots.txt')
       options[0].ignore.push('service-worker.js')
       return [options]
