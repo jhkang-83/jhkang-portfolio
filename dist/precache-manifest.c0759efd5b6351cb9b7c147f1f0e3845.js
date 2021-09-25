@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16830c626918e4c3a9f4",
+    "revision": "d956273c864edc1f9191",
     "url": "/jhkang-portfolio/css/about.22655a6d.css"
   },
   {
-    "revision": "25224e9956998ad9d54c",
-    "url": "/jhkang-portfolio/css/app.77a2ecbb.css"
+    "revision": "97fc6e6fd9b51a8163fc",
+    "url": "/jhkang-portfolio/css/app.f8281113.css"
   },
   {
-    "revision": "db27a2ccfc0f3c9131e4",
+    "revision": "6636e18aef01414671c0",
     "url": "/jhkang-portfolio/css/projects.df280e4f.css"
   },
   {
@@ -132,24 +132,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jhkang-portfolio/img/project_2021_07_main.d693921e.jpg"
   },
   {
-    "revision": "7f5fe15bffe25bb0d4990f807d2153dd",
+    "revision": "e138205662b28cf1796fec5a0bc63120",
     "url": "/jhkang-portfolio/index.html"
   },
   {
-    "revision": "16830c626918e4c3a9f4",
-    "url": "/jhkang-portfolio/js/about.993e86ea.js"
+    "revision": "d956273c864edc1f9191",
+    "url": "/jhkang-portfolio/js/about.fb230da3.js"
   },
   {
-    "revision": "25224e9956998ad9d54c",
-    "url": "/jhkang-portfolio/js/app.993e86ea.js"
+    "revision": "97fc6e6fd9b51a8163fc",
+    "url": "/jhkang-portfolio/js/app.fb230da3.js"
   },
   {
-    "revision": "fa309d283d649ef06759",
-    "url": "/jhkang-portfolio/js/chunk-vendors.993e86ea.js"
+    "revision": "8ce902f53ad0149ff911",
+    "url": "/jhkang-portfolio/js/chunk-vendors.fb230da3.js"
   },
   {
-    "revision": "db27a2ccfc0f3c9131e4",
-    "url": "/jhkang-portfolio/js/projects.993e86ea.js"
+    "revision": "6636e18aef01414671c0",
+    "url": "/jhkang-portfolio/js/projects.fb230da3.js"
   },
   {
     "revision": "733e037baaa60059a409132a0a3cf5e4",
