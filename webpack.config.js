@@ -5,7 +5,7 @@ module.exports = {
     app: './src/main.js'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.scss', '.css'],
+    extensions: ['.js', '.vue', '.json'],
     alias: {
       '@': srcPath,
       '~': srcPath,
