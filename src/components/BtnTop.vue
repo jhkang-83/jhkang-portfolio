@@ -15,12 +15,10 @@ export default {
   name: 'BtnTop',
   data () {
     return {
-      scrollPosionY: 0,
       isShowTobBtn: false
     }
   },
   mounted () {
-    this.scrollPosionY = window.scrollY
     window.addEventListener('scroll', this.onScrollY)
   },
   beforeUnmount () {
@@ -28,8 +26,18 @@ export default {
   },
   methods: {
     handleClickScrollTop () {
-      this.$emit('scrollTop')
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+      const elementId = document.querySelector('body')
+      const durationTime = 300
+      let ey = elementId.getBoundingClientRect().top
+      const dy = (ey * 30) / durationTime
+      const direction = dy > 0 ? 1 : -1
+
+      const timer = setInterval(() => {
+        scrollBy(0, dy)
+        ey -= dy
+
+        if (direction * ey <= 0) clearInterval(timer)
+      }, 30)
     },
     onScrollY () {
       if (window.pageYOffset > 100) {
