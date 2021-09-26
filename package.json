@@ -8,17 +8,22 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@newbiz/common-libs": "^3.0.1",
     "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/postcss7-compat": "^2.2.14",
     "@types/feather-icons": "^4.7.0",
     "axios": "^0.21.4",
-    "core-js": "^3.6.5",
+    "core-js": "^3.18.0",
     "feather-icons": "^4.28.0",
     "register-service-worker": "^1.7.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14",
+    "tailwindcss-dark-mode": "^1.1.7",
     "vue": "^3.2.11",
     "vue-axios": "^3.3.6",
     "vue-feather": "^1.1.1",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -37,10 +42,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "node-sass": "^4.12.0",
     "postcss": "^7.0.36",
-    "sass-loader": "^8.0.2",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
+    "sass": "^1.42.1",
+    "sass-loader": "^8.0.2"
   },
   "eslintConfig": {
     "root": true,
