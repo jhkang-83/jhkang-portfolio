@@ -40,9 +40,13 @@ export default {
     }
   },
   mounted () {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   },
   created () {
     this.getList()
+  },
+  updated () {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   },
   methods: {
     ...mapActions({
