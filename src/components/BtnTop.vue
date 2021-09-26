@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="u-btn-floating">
+    <div v-show="isShowTobBtn" class="u-btn-floating">
       <div class="fixed-max-width">
         <a href="#" class="btn-top" @click.prevent="handleClickScrollTop">
           <span>TOP</span>
@@ -15,12 +15,28 @@ export default {
   name: 'BtnTop',
   data () {
     return {
+      scrollPosionY: 0,
+      isShowTobBtn: false
     }
+  },
+  mounted () {
+    this.scrollPosionY = window.scrollY
+    window.addEventListener('scroll', this.onScrollY)
+  },
+  beforeUnmount () {
+    window.removeEventListener('scroll', this.onScrollY)
   },
   methods: {
     handleClickScrollTop () {
       this.$emit('scrollTop')
-      window.scrollTo(0, 0)
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    },
+    onScrollY () {
+      if (window.pageYOffset > 100) {
+        this.isShowTobBtn = true
+      } else {
+        this.isShowTobBtn = false
+      }
     }
   }
 }

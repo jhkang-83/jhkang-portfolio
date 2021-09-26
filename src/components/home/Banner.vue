@@ -29,7 +29,7 @@
       <div
           class="text-gray-400 rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm∫ p-4"
       >
-        9년차 개발자로 컨텐츠, Web, SI에서 개발/배포/운영 경험이 있습니다.
+        9년차 개발자로 콘텐츠, Web, SI에서 개발/배포/운영 경험이 있습니다.
         주로 웹서비스 개발을 담당했으며 주 언어로는 Flex와 Java/Servlet 를 사용했으며 현재 위메프 Front-end 개발
         운영하면서 Vue.js와 TypeScript, REST API를 사용하여 Front-end 개발에 이해도를 가지고 있습니다.
       </div>

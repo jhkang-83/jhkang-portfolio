@@ -22,9 +22,11 @@ export default {
   },
   mounted () {
     feather.replace()
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   },
   updated () {
     feather.replace()
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   },
   methods: {}
 }

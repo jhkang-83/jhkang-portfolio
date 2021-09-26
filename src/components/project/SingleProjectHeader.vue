@@ -10,10 +10,17 @@
     <div class="flex pb-3">
       <div class="flex items-center list-title">
         <i class="header-list-icon"></i>
-        <div class="text-primary-gray dark:text-primary-light">platform</div>
+        <div class="text-primary-gray dark:text-primary-light">
+          platform
+        </div>
       </div>
       <div class="list-item sm:pl-5">
-        <span v-for="(item, index) in platform" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
+        <span v-for="(item, index) in platform"
+        :key="index"
+        :class="`select-value-color-${Math.floor(Math.random() * 8)}`"
+        class="header-list-margin text-ternary-dark dark:text-ternary-light">
+        {{ item }}
+        </span>
       </div>
     </div>
 
@@ -21,10 +28,17 @@
     <div class="flex pb-3">
       <div class="flex items-center list-title">
         <i class="header-list-icon"></i>
-        <div class="text-primary-gray dark:text-primary-light">task</div>
+        <div class="text-primary-gray dark:text-primary-light">
+          task
+        </div>
       </div>
       <div class="list-item sm:pl-5">
-        <span v-for="(item, index) in task" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
+        <span v-for="(item, index) in task"
+        :key="index"
+        :class="`select-value-color-${Math.floor(Math.random() * 8)}`"
+        class="header-list-margin text-ternary-dark dark:text-ternary-light">
+        {{ item }}
+        </span>
       </div>
     </div>
 
@@ -32,10 +46,17 @@
     <div class="flex pb-3">
       <div class="flex items-center list-title">
         <i class="header-list-icon"></i>
-        <div class="text-primary-gray dark:text-primary-light">tech_stack</div>
+        <div class="text-primary-gray dark:text-primary-light">
+          tech_stack
+        </div>
       </div>
-      <div class="list-item sm:pl-5 pl-5">
-        <span v-for="(item, index) in tech_stack" :key="index" :class="`select-value-color-${Math.floor(Math.random() * 8)}`" class="header-list-margin text-ternary-dark dark:text-ternary-light">{{ item }}</span>
+      <div class="list-item sm:pl-5">
+        <span v-for="(item, index) in tech_stack"
+        :key="index"
+        :class="`select-value-color-${Math.floor(Math.random() * 8)}`"
+        class="header-list-margin text-ternary-dark dark:text-ternary-light">
+        {{ item }}
+        </span>
       </div>
     </div>
   </div>
@@ -73,12 +94,12 @@ export default {
 }
 .list-title {
   width: 120px;
+  min-width: 120px;
 }
 .list-item {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  min-width: 0px;
   margin-left: 5px;
 }
 </style>
