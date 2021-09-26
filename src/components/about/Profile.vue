@@ -19,15 +19,6 @@
         </div>
       </div>
 
-      <div class="flex text-left">
-        <p class="text-primary-gray dark:text-primary-light font-semibold">
-          phone.
-        </p>
-        <div class="pl-8">
-          <p>010-6408-8301</p>
-        </div>
-      </div>
-
       <p class="text-2xl sm:text-3xl font-semibold mt-7 mb-3 sm:mt-10 text-ternary-dark dark:text-ternary-light">
         Channel
       </p>

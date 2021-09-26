@@ -1,11 +1,9 @@
 <template>
   <transition name="fade">
-    <div v-show="!isShowTopBtn ? isScrolling : isShowTopBtn"
-      class="u-btn-floating"
-      :class="{ page: !forPopup, 'posi-type2': !isShowBottomNav }">
+    <div class="u-btn-floating">
       <div class="fixed-max-width">
         <a href="#" class="btn-top" @click.prevent="handleClickScrollTop">
-          <span>맨 위로</span>
+          <span>TOP</span>
         </a>
       </div>
     </div>
@@ -15,31 +13,14 @@
 <script>
 export default {
   name: 'BtnTop',
-  props: ['isShowTopBtn', 'forPopup', 'scrollTop', 'showBottomNav'],
   data () {
     return {
-      isScrolling: false
     }
-  },
-  computed: {
-    isShowBottomNav () {
-      return !!this.$route.meta.isShowBottomNav || this.showBottomNav
-    }
-  },
-  created () {
-    document.addEventListener('scroll', this.onScroll)
-  },
-  beforeUnmount () {
-    document.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     handleClickScrollTop () {
       this.$emit('scrollTop')
       window.scrollTo(0, 0)
-    },
-    onScroll () {
-      if (this.utils.ui.isFrozen()) return
-      this.isScrolling = window.scrollY > 50
     }
   }
 }
@@ -62,28 +43,30 @@ export default {
 }
 
 .btn-top {
-  display: flex;
-  float: right;
+  position: fixed;
   margin-right: 15px;
-  text-align: center;
-  color: #999;
-  width: 40px;
-  height: 40px;
+  right: 15px;
+  bottom: 25px;
+  z-index: 100;
   border-radius: 50%;
   box-shadow: 0 1px 3px 0 hsl(0deg 0% 68% / 20%);
   border: 1px solid #e7e4e0;
   background-color: #fff;
+  color: #999;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  text-align: center;
 
   span {
-    display: block;
+    position: absolute;
     overflow: hidden;
+    background: url(~@/assets/images/btnTopIcon.png) no-repeat;
+    background-position: 12px 10px;
+    vertical-align: top;
     margin: auto;
-    width: 15px;
-    height: 15px;
-    background: url('~@/assets/images/btnTopIcon.png') no-repeat;
-    background-size: 15px auto;
-    background-position: 9px 10px;
     color: transparent;
+    background-size: 15px auto;
   }
 }
 </style>

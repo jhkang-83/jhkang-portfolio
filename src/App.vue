@@ -2,6 +2,7 @@
   <div :class="appTheme">
     <Header></Header>
     <router-view />
+    <btn-top/>
     <Footer />
   </div>
 </template>
@@ -10,11 +11,13 @@
 import feather from 'feather-icons'
 import Header from '@/components/shared/Header'
 import Footer from '@/components/shared/Footer'
+import BtnTop from '@/components/BtnTop.vue'
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    BtnTop
   },
   data: () => {
     return {
