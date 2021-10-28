@@ -8,7 +8,7 @@ const getters = {
 
 const actions = {
   async get_career_list ({ commit }) {
-    const result = await fetch(`${process.env.VUE_APP_API_URI}/c4071596e85e67e8a9e9154c62b35984/raw/839646eb24266d5f84b1ed196eade356c0e697b9/career`)
+    const result = await fetch(`${process.env.VUE_APP_API_URI}/c4071596e85e67e8a9e9154c62b35984/raw/124731fc83a4f6f68a61d7528c4f4c889fe0970b/career`)
     const json = await result.json()
 
     return commit('SET_CAREER_LIST', json.careers)
