@@ -37,7 +37,7 @@ export default {
         ey -= dy
 
         if (direction * ey <= 0) clearInterval(timer)
-      }, 30)
+      }, 5)
     },
     onScrollY () {
       if (window.pageYOffset > 100) {
