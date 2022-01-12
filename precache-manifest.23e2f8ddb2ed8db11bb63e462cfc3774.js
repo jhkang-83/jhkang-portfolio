@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jhkang-portfolio/css/about.22655a6d.css"
   },
   {
-    "revision": "4a873423c5ee9f82f092",
+    "revision": "494b0a447998b884d17f",
     "url": "/jhkang-portfolio/css/app.c9e8a93f.css"
   },
   {
@@ -132,24 +132,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jhkang-portfolio/img/project_2021_07_main.d693921e.jpg"
   },
   {
-    "revision": "12e97cec22d5b324fc2a977c7c33c8a4",
+    "revision": "d1422cf8987e0479530f3b749158968c",
     "url": "/jhkang-portfolio/index.html"
   },
   {
     "revision": "c8f6ce06bb43cc929df6",
-    "url": "/jhkang-portfolio/js/about.cbcfae66.js"
+    "url": "/jhkang-portfolio/js/about.df2b53fd.js"
   },
   {
-    "revision": "4a873423c5ee9f82f092",
-    "url": "/jhkang-portfolio/js/app.cbcfae66.js"
+    "revision": "494b0a447998b884d17f",
+    "url": "/jhkang-portfolio/js/app.df2b53fd.js"
   },
   {
     "revision": "0f30a8827eee53a4d5ea",
-    "url": "/jhkang-portfolio/js/chunk-vendors.cbcfae66.js"
+    "url": "/jhkang-portfolio/js/chunk-vendors.df2b53fd.js"
   },
   {
     "revision": "8e1c8c5daf0ff40347bb",
-    "url": "/jhkang-portfolio/js/projects.cbcfae66.js"
+    "url": "/jhkang-portfolio/js/projects.df2b53fd.js"
   },
   {
     "revision": "733e037baaa60059a409132a0a3cf5e4",
